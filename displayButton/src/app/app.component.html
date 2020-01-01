@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col"> -->
+      <app-navbar [time]="time" [isPlay]="isPlay"></app-navbar>
+    <!-- </div> -->
+  </div>
+  <div class="col-2"></div>
+  <div class="col-8">
+    <div>
+      <img src="../assets/images/icon.png" alt="" (click)="startTime()" *ngIf="isPlay">
+      <img src="../assets/images/pause.png" alt="" (click)="stopTime()" *ngIf="!isPlay">
+      <p>timer:{{time}}</p>
+    </div>
+  </div>
+  <div class="col-2"></div>
+</div>
